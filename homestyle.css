@@ -4,7 +4,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: #6e0404;
+    background-color: #9b0c0c;
     -webkit-box-direction: normal;
     flex-direction: column;
     min-height: 100vh
@@ -32,7 +32,7 @@ body ::-webkit-scrollbar-thumb:active,body::-webkit-scrollbar-thumb:active {
 
 
 .topbar {
-    background-color: #9b0c0c;
+    
 }
 .topbar img {
     max-width: 800px;
@@ -51,13 +51,51 @@ body ::-webkit-scrollbar-thumb:active,body::-webkit-scrollbar-thumb:active {
     -webkit-transition: background-color .5s, color .5s;
     transition: background-color .5s, color .5s
 }
+.spike-backdrop2 {
+    position: absolute;          /* or fixed if you want it to stay while scrolling */
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 200px;               /* adjust to the height of your spikes */
+    background-image: url('images/spikes2.png');
+    background-repeat: repeat-x; /* makes it tile horizontally */
+    background-size: auto 100%;  /* keeps the height correct */
+    animation: scrollSpikes 20s linear infinite;
+    z-index: -2;                  /* put it behind or in front of other stuff as needed */
+    pointer-events: none;        /* so it doesn’t block clicks */
+}
+
+@keyframes scrollSpikes2 {
+    from { background-position: 0 0; }
+    to   { background-position: 639px 0; }  /* exact width of the new seamless image */
+}
+
+.spike-backdrop {
+    position: absolute;          /* or fixed if you want it to stay while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;               /* adjust to the height of your spikes */
+    background-image: url('images/spikes.png');
+    background-repeat: repeat-x; /* makes it tile horizontally */
+    background-size: auto 100%;  /* keeps the height correct */
+    animation: scrollSpikes 20s linear infinite;
+    z-index: -2;                  /* put it behind or in front of other stuff as needed */
+    pointer-events: none;        /* so it doesn’t block clicks */
+}
+
+@keyframes scrollSpikes {
+    from { background-position: 0 0; }
+    to   { background-position: -639px 0; }  /* exact width of the new seamless image */
+}
 
 .navbar {
     position: relative;
     z-index: 99;
 }
 
-.promoart img{
+.promoart img
+{
     width: 100%;
 }
 
