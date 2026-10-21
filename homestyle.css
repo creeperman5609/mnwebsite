@@ -194,10 +194,36 @@ ul {
     margin-left: 5px;
     width: 0.5em;
 }
-.eyx img {
+.eyx {
+    background-color: #4b0303;
+    color: #fff;
+    text-shadow: 0 0 10px #fff,0 0 20px #fa0606;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    display: flex;
+}
+.eyx .eyximage img {
     max-width: 400px;
 }
-.eyx h1 {
+.eyx .eyxtext h1{
+    text-align: center;
     src: url("http://fontstruct.com/fontstructions/show/1248129");
     font-size: 5rem
+}
+.eyx .eyxbutton button{
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Futura Condensed", sans-serif;
+    background: linear-gradient(135deg, #4b0303, #fa0606);
+    color: #fff;
+    transition: filter 0.3s ease, background 0.3s ease;
+    border: none;
+}
+.eyx .eyxbutton button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+[class^="eyxbutton"]:not(span) {
+  box-shadow: 0 0 20px rgba(124,108,255,0.5), 0 0 40px rgba(124,108,255,0.25);
 }
